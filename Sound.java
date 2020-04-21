@@ -5,34 +5,16 @@ public class Sound {
 
 
   public int limitAmplitude (int limit) {
-    int numChanges = 0;
     // Write code for Part A here
-    for (int i=0; i < samples.length; i++) {
-      if (samples[i] < -limit) {
-        samples[i] = -limit;
-        numChanges++;
-      } else if (samples[i] > limit) {
-        samples[i] = limit;
-        numChanges++;
-      }
 
-    }
 
     // Don't forget to change your return value
-      return numChanges;
+      return 0;
   }
   public void trimSilenceFromBeginning () {
       // Write code for Part B here
-      int counter = 0;
-      while (counter < samples.length && samples[counter++]==0);
 
-      counter--;
-      int[] new_samples = new int[samples.length-counter];
-      
-      for (int i=counter; i < samples.length; i++)
-        new_samples[i-counter] = samples[i];
-      
-      samples = new_samples;
+
   }
 
 
